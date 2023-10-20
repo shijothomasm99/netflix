@@ -1,0 +1,335 @@
+:root {
+    --white-color: #fff;
+    --primary-color: rgb(229, 9, 20);
+    --primary-hover: rgb(193, 17, 25);
+    --border-color: #675f5f;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Common styles */
+h1 {
+    font-size: 3.4rem!important;
+    font-weight: 800!important;
+    
+}
+
+h4 {
+    font-weight: 400!important;
+    font-size: 1.5rem!important;
+}
+
+h5 {
+    font-weight: 400!important;
+    font-size: 1.3rem!important;
+}
+.sign-in-btn:hover,.get-started-btn:hover {
+    background-color: var(--primary-hover) !important;
+}
+header,section{
+    position: relative;
+}
+header::after, section::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgb(44, 44, 46);
+}
+/* Header */
+header {
+    background-image: url(images/header-image.jpg);
+    background-position: 30% 67%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    position: relative;
+    isolation: isolate;
+    /* isolation and z index of ::before are related here to isolate the shadow effect only on background image */
+    color: var(--white-color);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.407) 60%, rgba(0, 0, 0, 1) 100%);
+    z-index: -1;
+}
+
+
+header .container {
+    display: grid;
+    place-items: center;
+    height: 85%;
+    column-gap: 0px;
+}
+
+header .container form,.section-five form {
+    width: 100%;
+    max-width: 600px;
+    gap: 10px;
+}
+
+header input, .section-five input {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+input[placeholder="Email address"]::placeholder {
+    color: #c0bcbc;
+}
+
+
+.navbar img {
+    width: 175px;
+}
+
+.language-selector {
+    position: relative;
+    width: 115px;
+}
+
+.language-selector select { /* will hide the default select arrow */
+    -webkit-appearance: none;/* Remove arrow in Webkit browsers */
+    -moz-appearance: none; /* Remove arrow in Firefox */
+    appearance: none; /* Remove arrow in other browsers */
+    background: transparent;  /* Optional: Make the background transparent */
+    height: 32px;
+    width: 100%;
+    text-align: center;
+    color: var(--white-color);
+    border-radius: 5px;
+    padding-bottom: 2px;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 3px;
+    right: 12px;
+    color: var(--white-color);
+    font-size: x-small;
+    padding-top: 5px;
+}
+
+.chinese-icon-container {
+    position: absolute;
+    left: 10px;
+    color: var(--white-color);
+
+}
+
+.sign-in-btn {
+    padding-bottom: 2px !important;
+}
+
+.btn-danger {
+    background-color: var(--primary-color) !important;
+}
+
+
+
+.get-started-btn {
+    font-size: 1.5rem!important;
+    padding-bottom: 12px!important;
+}
+
+/* Section-one */
+.section-one img{
+    width: 100%;
+}
+
+.section-one video{
+ max-width: 70%;
+ height: 78%;
+ bottom: 10%;
+ top: 10%;
+}
+
+/* Section-two */
+.stranger-things-div div:first-child{
+    width: 18%;
+}
+.stranger-things-div div:nth-child(2) span:last-child{
+   font-size:15px;
+}
+
+.stranger-things-div div:first-child img{
+    height: 80%;
+    width: 120%;
+}
+.stranger-things-div div:last-child img{
+    height: 50%;
+    width: 100%;
+}
+.stranger-things-div{
+    height: 26%;
+   
+    border-radius: 10px;
+    border: 2.4px solid #9a96967e;
+    top: 66%;
+    left: 20%;
+}
+.col-7{
+    width: 58.3%
+}
+
+/* Section-three */
+.section-three img{
+    width: 100%;
+}
+
+.section-three video{
+ max-width: 100%;
+ height: 48%;
+ top: 11%;
+ left: 20%;
+}
+
+/* Section-five */
+
+.accordion-m span:first-child{
+    float: left;
+   vertical-align: middle;
+   }
+.accordion-m span:last-child{
+float: right;
+}
+
+.accordion-button-m{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 19px;
+    margin: 3px 0;
+    border: none;
+    background-color:rgb(44, 44, 44) ;
+    color: var(--white-color);
+}
+.accordion-content-m{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 19px;
+    margin: 3px 0;
+    border: none;
+    background-color:rgb(44, 44, 44) ;
+    color: var(--white-color);
+   
+}
+.pb-6{
+ padding-bottom: 80px;
+}
+
+/* Footer */
+footer ul{
+    list-style-type: none;
+}
+footer li{
+    margin: 5px 0;
+}
+.text-gray{
+    color: #ddd;
+    font-size: 0.9rem!important;
+    padding: 5px 0;
+}
+footer .container a:first-child span:last-child{
+ text-decoration: underline!important;
+}
+
+/* Responsive */
+@media (max-width:960px) {
+    /* Header */
+    .navbar img {
+        width: 100px;
+    }
+    h1{
+        font-size:30px!important;
+        font-weight: 700!important;
+    }
+    header{
+        height: 515px;
+        background-size:cover;
+        background-position: 0%;
+    }
+    h4,h5{
+        font-size: 18px!important;
+    }
+    .container{
+        padding:0px 0px!important;
+    }
+    .stranger-things-div div:last-child img{
+        height: 60%;  
+    }
+    .accordion-button-m{
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 19px;
+        margin: 3px 0;
+        border: none;
+        background-color:rgb(44, 44, 44) ;
+        color: var(--white-color);
+    }
+    .accordion-content-m{
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 19px;
+        margin: 3px 0;
+        border: none;
+        background-color:rgb(44, 44, 44) ;
+        color: var(--white-color);
+       
+    }
+
+}
+
+@media (min-width:1280px) {
+    .container-fluid {
+        max-width: 1095px;
+    }
+}
+@media (max-width:1280px) {
+    .stranger-things-div{
+        width: 70%!important;
+        left: 15%;
+        height: 20%;
+    }
+    .stranger-things-div div:first-child {
+        width: 15%;
+    }
+    
+}
+
+@media (max-width:576px) {
+    header form input, .section-five input{
+        height:50px
+    }
+    header form button .section-five form button{
+        max-width: 180px;
+    }
+    .get-started-btn {
+        font-size: 1.2rem !important;
+        padding-bottom: 8px!important;
+    }
+    header{
+        height: 505px;
+        background-size:cover;
+        background-position: 0%;
+    }
+    h1{
+        font-weight: 700!important;
+    }
+    h4,h5{
+        font-size: 18px!important;
+    }
+    .container{
+        padding:0px 40px!important;
+    }
+    .stranger-things-div div:last-child img{
+        height: 80%;  
+    }
+}
